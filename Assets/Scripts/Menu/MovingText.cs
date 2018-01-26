@@ -6,7 +6,7 @@ public class MovingText : MonoBehaviour
 {
 	public float range;
 	public Vector3 position;
-	public float time = 0.3f;
+	public float time = 0.5f;
 	public float chrono;
 
 	// Use this for initialization
