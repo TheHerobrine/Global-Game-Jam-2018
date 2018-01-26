@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuScript : MonoBehaviour
 {
@@ -68,13 +69,13 @@ public class MenuScript : MonoBehaviour
 
 	void SelectText(GameObject element)
 	{
-		Text textElement = element.GetComponent<Text>();
+		TextMeshProUGUI textElement = element.GetComponent<TextMeshProUGUI>();
 		textElement.text = "( " + textElement.text + " )";
 	}
 
 	void UnselectText(GameObject element)
 	{
-		Text textElement = element.GetComponent<Text>();
+		TextMeshProUGUI textElement = element.GetComponent<TextMeshProUGUI>();
 		textElement.text = textElement.text.Substring(2, textElement.text.Length - 4);
 	}
 }
