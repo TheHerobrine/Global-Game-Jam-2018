@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4565167446094038}
   - component: {fileID: 20449727230715444}
-  - component: {fileID: 124457316692508608}
+  - component: {fileID: 114431182964615110}
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -323,6 +323,18 @@ MonoBehaviour:
   moveLimit: 0.1
   minAnimationSpeed: 0.04
   maxAnimationSpeed: 1.3
+--- !u!114 &114431182964615110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160466909701434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 670f82a97f1a9984981b5d9a5284b272, type: 2}
 --- !u!114 &114731934964826658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,13 +359,6 @@ MonoBehaviour:
   zoomMagnitude: 0.05
   zoomOffset: 3.87
   satellite: {fileID: 1482751061937122}
---- !u!124 &124457316692508608
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1160466909701434}
-  m_Enabled: 1
 --- !u!212 &212307410176620364
 SpriteRenderer:
   m_ObjectHideFlags: 1
