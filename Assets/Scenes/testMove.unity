@@ -113,6 +113,21 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &146155059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1f7d21fc9554840bb91d8014b26509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderBlurID: 0
+  shaderColorID: 0
+  displayMesh: {fileID: 0}
+  displayMat: {fileID: 0}
 --- !u!1001 &227745069
 Prefab:
   m_ObjectHideFlags: 0
@@ -197,6 +212,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &670089729 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1972560950638070, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+    type: 2}
+  m_PrefabInternal: {fileID: 227745069}
+--- !u!114 &670089734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670089729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f88565d71f1c45805a52819e78abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ViewDistance: 1
+  Suspended: 0
 --- !u!1 &684984008
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +301,92 @@ Transform:
   m_LocalScale: {x: 3.467656, y: 1.6631382, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1301178214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1301178215}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1301178215
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301178214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1761401212}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1761401210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1761401212}
+  - component: {fileID: 1761401211}
+  m_Layer: 0
+  m_Name: Fog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1761401211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761401210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af0db29443bde842aeb5d020a195236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stampTexture: {fileID: 0}
+  size: 20
+  mode: 1
+  Resolution: 2048
+  edgeSoftness: 1
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  fogRenderer: {fileID: 146155059}
+  viewStamp: {fileID: 0}
+  viewStampMat: {fileID: 0}
+  snapShot: {fileID: 0}
+  snapShotInterval: 0.5
+  lastSnapShot: 0
+  initialized: 0
+--- !u!4 &1761401212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761401210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.25, y: -5.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1301178215}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1921633259
