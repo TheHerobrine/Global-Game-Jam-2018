@@ -45,12 +45,12 @@ public class EventWarning : MonoBehaviour {
 
 		if (Element_01.GetComponent<TypingText>().finish)
 		{
+			Element_03.SetActive(true);
+			Element_04.SetActive(true);
 			Element_02.SetActive(true);
 		}
 		if (Element_02.GetComponent<TypingText>().finish)
 		{
-			Element_03.SetActive(true);
-			Element_04.SetActive(true);
 			Element_05.SetActive(true);
 		}
 		if (Element_05.GetComponent<TypingText>().finish)
