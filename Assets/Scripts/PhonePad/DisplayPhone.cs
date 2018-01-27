@@ -26,6 +26,8 @@ public class DisplayPhone : MonoBehaviour {
                 Debug.Log("button pressed");
                 PhoneSound.SetActive(false);
                 DisplayCanvas.SetActive(true);
+                Debug.Log(SelectableButton.GetComponent<Button>());
+                Debug.Log("Select button");
                 SelectableButton.GetComponent<Button>().Select();
                 Move.instance.moveLocked = true;
                 
