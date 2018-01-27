@@ -297,8 +297,8 @@ Canvas:
   m_GameObject: {fileID: 661754348}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 392627247}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -523,11 +523,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentText: 
-  time: 0.02
+  time: 0.04
   chrono: 0
   currentChar: 0
   textElement: {fileID: 0}
   continueElement: {fileID: 1591677707}
+  finish: 0
 --- !u!1 &1591677707
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ebabf3093e1c64e886e3e33ddd0ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
+  range: 0.05
   position: {x: 0, y: 0, z: 0}
   time: 0.5
   chrono: 0

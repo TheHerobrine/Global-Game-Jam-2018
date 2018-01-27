@@ -14,7 +14,7 @@ public class MovingText : MonoBehaviour
 	{
 		this.position = transform.position;
 		this.chrono = 0.0f;
-	}
+}
 	
 	// Update is called once per frame
 	void Update ()
