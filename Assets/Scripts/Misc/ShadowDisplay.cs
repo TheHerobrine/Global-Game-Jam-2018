@@ -15,6 +15,6 @@ public class ShadowDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		shadowObject.GetComponent<SpriteRenderer>().sharedMaterial.SetVector("_FadeOrigin", transform.position);
+		shadowObject.GetComponent<SpriteRenderer>().sharedMaterial.SetVector("_FadeOrigin", transform.position - Vector3.up*0.08f);
 	}
 }
