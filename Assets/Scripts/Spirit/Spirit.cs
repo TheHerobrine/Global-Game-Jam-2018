@@ -18,15 +18,29 @@ public class Spirit : MonoBehaviour
     public float zoomOffset = 0f;
 
     public GameObject satellite;
+    private Vector3 initialSpiritScale;
+
+    public void Start()
+    {
+        initialSpiritScale = satellite.transform.localScale;
+    }
 
     public void Update()
     {
         satellite.transform.localPosition = new Vector3(oscillateMagnitude * Mathf.Cos(oscillateOffset + excitation * Time.time * oscillateFreq), 0f, 0f);
+
+        float rotation = excitation * (baseSpeed + rotateMagnitude * (Mathf.Cos(rotateOffset + Time.time * rotateFreq) + 1f));
         transform.RotateAround(
             transform.parent.position,
             Vector3.back,
-            excitation * (baseSpeed + rotateMagnitude * (Mathf.Cos(rotateOffset + Time.time * rotateFreq) + 1f))
+            rotation
         );
-        satellite.transform.localScale = (1 + (Mathf.Cos(zoomOffset + excitation * Time.time * oscillateFreq) * zoomMagnitude)) * Vector3.one;
+
+        satellite.transform.RotateAround(
+            transform.position,
+            Vector3.forward,
+            rotation
+        );
+        satellite.transform.localScale = (1 + (Mathf.Cos(zoomOffset + excitation * Time.time * oscillateFreq) * zoomMagnitude)) * initialSpiritScale;
     }
 }
