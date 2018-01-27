@@ -1292,7 +1292,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1487713473685678, guid: 9b6ce06132481dc459563906f0b86b32, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114815065503488998, guid: 9b6ce06132481dc459563906f0b86b32,
         type: 2}
@@ -1769,6 +1769,26 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114012018809245582, guid: 9b6ce06132481dc459563906f0b86b32,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114916086464126120, guid: 9b6ce06132481dc459563906f0b86b32,
+        type: 2}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114916086464126120, guid: 9b6ce06132481dc459563906f0b86b32,
+        type: 2}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114836266179290142, guid: 9b6ce06132481dc459563906f0b86b32,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b6ce06132481dc459563906f0b86b32, type: 2}
   m_IsPrefabParent: 0
@@ -1896,12 +1916,7 @@ Prefab:
     - {fileID: 124457316692508608, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
     - {fileID: 114431182964615110, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
     - {fileID: 81898505153947508, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
-    - target: {fileID: 331159787769757100, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
-        type: 2}
-      propertyPath: m_IsCustomRangeActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &490498892 stripped
@@ -2380,7 +2395,7 @@ Transform:
   - {fileID: 255437849}
   - {fileID: 436143428}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726139985 stripped
 GameObject:
@@ -4170,7 +4185,7 @@ Transform:
   m_Children:
   - {fileID: 732218922}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1412880361
 SpriteRenderer:
@@ -5709,7 +5724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1909783899
 Prefab:
