@@ -6,9 +6,14 @@ using UnityEngine;
 
 public class EnterRoom : MonoBehaviour
 {
+
+    public GameObject Door;
+
+    private AudioSource DoorSound;
     private bool fadeStarted = false;
     private void Awake()
     {
+        DoorSound = Door.GetComponent<AudioSource>();
     }
     // Use this for initialization
     void Start () {
@@ -25,7 +30,18 @@ public class EnterRoom : MonoBehaviour
         if (fadeStarted)
             return;
         fadeStarted = true;
+        DoorSound.Play();
+        StartCoroutine("OpenDoor");
         StartCoroutine("Fade");
+    }
+
+    IEnumerator OpenDoor()
+    {
+        for (float f = 0f; f < 90; f += 1f)
+        {
+            Door.transform.Rotate(0f, 0f, -1f);
+            yield return null;
+        }
     }
 
     IEnumerator Fade()
