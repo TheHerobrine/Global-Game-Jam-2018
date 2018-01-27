@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayPhone : MonoBehaviour {
 
     public GameObject DisplayCanvas;
     public GameObject DisplayParticles;
     public GameObject PhoneSound;
-
+    public GameObject SelectableButton;
+   
     private bool clickable;
 
 	// Use this for initialization
@@ -19,11 +21,16 @@ public class DisplayPhone : MonoBehaviour {
 	void Update () {
 		if(clickable)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !Move.instance.moveLocked)
             {
                 Debug.Log("button pressed");
                 PhoneSound.SetActive(false);
                 DisplayCanvas.SetActive(true);
+                Debug.Log(SelectableButton.GetComponent<Button>());
+                Debug.Log("Select button");
+                SelectableButton.GetComponent<Button>().Select();
+                Move.instance.moveLocked = true;
+                
             }
         }
 	}
