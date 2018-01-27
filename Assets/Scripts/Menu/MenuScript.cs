@@ -23,6 +23,9 @@ public class MenuScript : MonoBehaviour
 	public int currentSelection = 0;
 	public bool startGame = false;
 
+	public float waitTime = 0.5f;
+	public float waitChrono = 0.0f;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -45,25 +48,40 @@ public class MenuScript : MonoBehaviour
 
 		updateFade(this.state);
 
+		if (waitChrono > 0.0f)
+		{
+			waitChrono -= Time.deltaTime;
+		}
+		else
+		{
+			waitChrono = 0.0f;
+		}
+
 		switch (this.state)
 		{
 			case 0:
-				if (Input.GetKeyDown("down"))
+				if ((Input.GetAxis("Vertical") < 0.0f) && (waitChrono == 0.0f))
 				{
 					UnselectText(GetElement(currentSelection));
 					currentSelection++;
 					currentSelection %= 4;
 					SelectText(GetElement(currentSelection));
+					waitChrono = waitTime;
 				}
-				if (Input.GetKeyDown("up"))
+				if ((Input.GetAxis("Vertical") > 0.0f) && (waitChrono == 0.0f))
 				{
 					UnselectText(GetElement(currentSelection));
 					currentSelection += 3;
 					currentSelection %= 4;
 					SelectText(GetElement(currentSelection));
+					waitChrono = waitTime;
+				}
+				if (Input.GetAxis("Vertical") == 0.0f)
+				{
+					waitChrono = 0.0f;
 				}
 
-				if (Input.GetKeyDown("return"))
+				if (Input.GetButtonDown("Fire1"))
 				{
 					switch (currentSelection)
 					{
@@ -80,7 +98,7 @@ public class MenuScript : MonoBehaviour
 				}
 				break;
 			case 1:
-				if (Input.GetKeyDown("return"))
+				if (Input.GetButtonDown("Fire1"))
 				{
 					this.state = 0;
 				}
