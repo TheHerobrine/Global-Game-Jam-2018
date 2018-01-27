@@ -404,6 +404,10 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61782025167653208, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
     - {fileID: 114042053961143778, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
@@ -1767,6 +1771,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 2.113611
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -4703,7 +4711,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 679201121}
-  m_Layer: 8
+  m_Layer: 4
   m_Name: FogOfWar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5958,6 +5966,10 @@ Prefab:
         type: 2}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61782025167653208, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
@@ -7459,6 +7471,10 @@ Prefab:
       propertyPath: m_Size.x
       value: 2.9078593
       objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61782025167653208, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
     - {fileID: 114042053961143778, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
@@ -8707,14 +8723,14 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1558204105}
     - target: {fileID: 4357403134679588, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
       propertyPath: m_LocalPosition.z
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4975919202196398, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4887430849139638, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8747,6 +8763,54 @@ Prefab:
     - target: {fileID: 4908873106430912, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146739962818098, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574219238683086, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212198190141287896, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1314088253
+      objectReference: {fileID: 0}
+    - target: {fileID: 212198190141287896, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212013477577096782, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1314088253
+      objectReference: {fileID: 0}
+    - target: {fileID: 212013477577096782, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212367262746414578, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1314088253
+      objectReference: {fileID: 0}
+    - target: {fileID: 212367262746414578, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212145551787706698, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1314088253
+      objectReference: {fileID: 0}
+    - target: {fileID: 212145551787706698, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
@@ -10099,6 +10163,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6cd1446e61af944cb5f532d0befdf2d, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &1558204105 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20789146160504996, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226188532}
 --- !u!1001 &1569727587
 Prefab:
   m_ObjectHideFlags: 0
@@ -10210,6 +10279,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 3.6953838
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61782025167653208, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
@@ -11602,6 +11675,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 2.70398
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202924662977962, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61782025167653208, guid: 5bf8edcc0a2cc184b8c288d89b60a927, type: 2}

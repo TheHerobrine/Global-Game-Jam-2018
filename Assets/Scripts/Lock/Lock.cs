@@ -70,8 +70,11 @@ public class Lock : MonoBehaviour {
         {
             return;
         }
-
-        loopTimer -= Time.deltaTime;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            this.gameObject.SetActive(false);
+        }
+            loopTimer -= Time.deltaTime;
         //Debug.Log(loopTimer);
         if (loopTimer < 0)
         {
