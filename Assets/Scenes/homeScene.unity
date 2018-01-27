@@ -4314,8 +4314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracked: {fileID: 1704048590}
-  speed: 0.9
-  trackingRadius: 0.06
+  speed: 1.5
+  trackingRadius: 0.1
   oscillateFreq: 1
   oscillateOffset: 150
   oscillateMagnitude: 0.2
@@ -4331,7 +4331,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1.2
+  m_LinearDrag: 1.6
   m_AngularDrag: 0.4
   m_GravityScale: 0
   m_Material: {fileID: 0}
