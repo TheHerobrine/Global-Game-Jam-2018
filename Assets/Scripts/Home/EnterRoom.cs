@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[RequireComponent(typeof(AudioSource))]
 public class EnterRoom : MonoBehaviour
 {
 
     public GameObject Door;
+    public GameObject FogOfwar;
 
     private AudioSource DoorSound;
+    private Renderer RendererFogOfwar;
     private bool fadeStarted = false;
     private void Awake()
     {
-        DoorSound = Door.GetComponent<AudioSource>();
+        DoorSound = this.GetComponent<AudioSource>();
+        RendererFogOfwar = FogOfwar.GetComponent<Renderer>();
     }
     // Use this for initialization
     void Start () {
@@ -25,14 +28,22 @@ public class EnterRoom : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (fadeStarted)
             return;
-        fadeStarted = true;
-        DoorSound.Play();
-        StartCoroutine("OpenDoor");
-        StartCoroutine("Fade");
+        Debug.Log("Trigger");
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fadeStarted = true;
+            DoorSound.Play();
+            StartCoroutine("OpenDoor");
+            Color c = RendererFogOfwar.material.color;
+            Debug.Log(c);
+            if(c.a == 1f)
+                StartCoroutine("Fade");
+            this.enabled = false;
+        }
     }
 
     IEnumerator OpenDoor()
@@ -46,12 +57,11 @@ public class EnterRoom : MonoBehaviour
 
     IEnumerator Fade()
     {
-        Renderer renderer = this.GetComponent<Renderer>();
-        Color c = renderer.material.color;
+        Color c = RendererFogOfwar.material.color;
         for (float f = 1f; f >= 0; f -= 0.01f)
         {
             c.a = f;
-            renderer.material.color = c;
+            RendererFogOfwar.material.color = c;
             yield return null;
         }
         this.enabled = false;
