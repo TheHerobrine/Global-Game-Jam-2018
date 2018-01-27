@@ -58,7 +58,7 @@ public class EventWarning : MonoBehaviour {
 			Element_06.SetActive(true);
 		}
 
-		if (Input.GetKeyDown("return"))
+		if (Input.GetButtonDown("Fire1"))
 		{
 			if (Element_06.activeSelf)
 			{

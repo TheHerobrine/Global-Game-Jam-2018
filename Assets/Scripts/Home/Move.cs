@@ -43,6 +43,10 @@ public class Move : MonoBehaviour {
             //rigidBody.MovePosition(rigidBody.position + (Vector2)speed * Time.deltaTime);
             orientedObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, speed);
         }
+		else
+		{
+			this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+		}
 
         animator.SetBool("Moving", speed.normalized.sqrMagnitude >= moveLimit);
         
