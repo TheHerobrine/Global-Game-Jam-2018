@@ -11,6 +11,7 @@ public class TypingText : MonoBehaviour {
 	public int currentChar = 0;
 	public TextMeshProUGUI textElement;
 	public GameObject continueElement;
+	public bool finish = false;
 
 	// Use this for initialization
 	void Start ()
@@ -41,7 +42,8 @@ public class TypingText : MonoBehaviour {
 
 		if (this.currentChar == this.contentText.Length)
 		{
-			continueElement.GetComponent<TextMeshProUGUI>().enabled = true;
+			this.continueElement.GetComponent<TextMeshProUGUI>().enabled = true;
+			this.finish = true;
 		}
 	}
 }
