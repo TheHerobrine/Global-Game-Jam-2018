@@ -25,7 +25,7 @@ public class TypingText : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown("return"))
+		if (Input.GetButtonDown("Fire1"))
 		{
 			this.currentChar = this.contentText.Length;
 			this.textElement.text = contentText;
