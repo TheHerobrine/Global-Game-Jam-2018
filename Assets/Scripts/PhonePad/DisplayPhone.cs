@@ -46,6 +46,7 @@ public class DisplayPhone : MonoBehaviour {
                         audio.clip = FoundSound;
                         audio.loop = false;
                         audio.priority = 256;
+                        audio.spatialBlend = 0;
                         audio.Play();
                         timer = soundTime;
                     }
