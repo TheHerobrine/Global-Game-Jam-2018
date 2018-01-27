@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class EnterRoom : MonoBehaviour
 {
-    private Renderer renderer;
+    private bool fadeStarted = false;
     private void Awake()
     {
-        renderer = GetComponent<Renderer>();
     }
     // Use this for initialization
     void Start () {
@@ -21,12 +20,24 @@ public class EnterRoom : MonoBehaviour
 		
 	}
 
-    void OnTriggerEnter()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Bidule");
-        Color color = GetComponent<Renderer>().material.color;
-        color.a = 1f;
+        if (fadeStarted)
+            return;
+        fadeStarted = true;
+        StartCoroutine("Fade");
+    }
 
-        GetComponent<Renderer>().material.SetColor("_Color", color);
+    IEnumerator Fade()
+    {
+        Renderer renderer = this.GetComponent<Renderer>();
+        Color c = renderer.material.color;
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            c.a = f;
+            renderer.material.color = c;
+            yield return null;
+        }
+        this.enabled = false;
     }
 }
