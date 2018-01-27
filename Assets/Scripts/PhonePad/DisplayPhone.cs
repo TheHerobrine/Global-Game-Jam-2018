@@ -41,10 +41,12 @@ public class DisplayPhone : MonoBehaviour {
                 {
                     if(FoundSound != null)
                     {
+                        PhoneSound.GetComponent<soundTrigger>().discovered = true;
                         AudioSource audio = PhoneSound.GetComponent<AudioSource>();
                         audio.clip = FoundSound;
                         audio.loop = false;
                         audio.priority = 256;
+                        audio.spatialBlend = 0;
                         audio.Play();
                         timer = soundTime;
                     }

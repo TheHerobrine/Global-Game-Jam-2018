@@ -12,11 +12,13 @@ public class soundTrigger : MonoBehaviour {
     private Collider2D triggerCollider;
     private float loopTimer;
     private bool triggered;
+    public bool discovered;
 
     private void Awake()
     {
         soundSource = GetComponent<AudioSource>();
         triggerCollider = GetComponent<Collider2D>();
+        discovered = false;
 
     }
 
@@ -40,20 +42,26 @@ public class soundTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(isLooped)
+        if(!discovered)
         {
-            triggered = true;
+            if(isLooped)
+            {
+                triggered = true;
+            }
+            soundSource.mute = false;
+            soundSource.Play();
+            loopTimer = loopTime;
         }
-        soundSource.mute = false;
-        soundSource.Play();
-        loopTimer = loopTime;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggered = false;
-        soundSource.mute = true;
-        soundSource.Pause();
-        loopTimer = 0;
+        if(!discovered)
+        {
+            triggered = false;
+            soundSource.mute = true;
+            soundSource.Pause();
+            loopTimer = 0;
+        }
     }
 }
