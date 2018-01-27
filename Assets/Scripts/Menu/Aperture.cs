@@ -37,7 +37,14 @@ public class Aperture : MonoBehaviour
 		if (chrono < 0)
 		{
 			DOFfrom = DOFto;
-			DOFto = Random.Range(2.0f, 50.0f);
+			if (DOFfrom < 10.0f)
+			{
+				DOFto = 30.0f;
+			}
+			else
+			{
+				DOFto = Random.Range(2.0f, 50.0f);
+			}
 			chrono += time;
 		}
 
