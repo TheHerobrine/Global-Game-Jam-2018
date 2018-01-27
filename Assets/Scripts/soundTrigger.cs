@@ -30,7 +30,6 @@ public class soundTrigger : MonoBehaviour {
         if (triggered)
         {
             loopTimer -= Time.deltaTime;
-            Debug.Log("loopTime " + loopTimer);
             if(loopTimer < 0)
             {
                 soundSource.Play();
@@ -41,8 +40,10 @@ public class soundTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        triggered = true;
-        Debug.Log("Enter Colision");
+        if(isLooped)
+        {
+            triggered = true;
+        }
         soundSource.mute = false;
         soundSource.Play();
         loopTimer = loopTime;
@@ -51,7 +52,6 @@ public class soundTrigger : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         triggered = false;
-        Debug.Log("Leave Colision");
         soundSource.mute = true;
         soundSource.Pause();
         loopTimer = 0;
