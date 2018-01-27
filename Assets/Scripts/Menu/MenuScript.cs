@@ -43,7 +43,7 @@ public class MenuScript : MonoBehaviour
 			switch (currentSelection)
 			{
 				case 0:
-					SceneManager.LoadScene("gameIntro");
+					SceneManager.LoadScene("gameWarning");
 					break;
 				case 3:
 					Application.Quit();
