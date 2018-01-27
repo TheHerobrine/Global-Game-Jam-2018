@@ -2,29 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(AudioSource))]
 public class PhoneCall : MonoBehaviour {
 
-    public GameObject btn1;
-    public GameObject btn2;
-    public GameObject btn3;
-    public GameObject btn4;
-    public GameObject btn5;
-    public GameObject btn6;
-    public GameObject btn7;
-    public GameObject btn8;
-    public GameObject btn9;
+    public int[] combination;
+    public int pos;
 
-    public List<int> combination;
+    public AudioClip successSound;
+    public AudioClip failureSound;
+    public AudioClip resultSound;
 
-    public Resources successSound;
+    private AudioSource audioSource;
 
-	// Use this for initialization
-	void Start () {
-		
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+        pos = 0;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    public void receiveInput(int number)
+    {
+        if(combination[pos] == number)
+        {
+            if(pos == combination.Length - 1 )
+            {
+                audioSource.clip = resultSound;
+                audioSource.Play();
+            }
+            else
+            {
+                audioSource.clip = successSound;
+                audioSource.Play();
+                pos++;
+            }
+        }
+        else
+        {
+            audioSource.clip = failureSound;
+            audioSource.Play();
+            pos = 0;
+        }
+    }
 }
