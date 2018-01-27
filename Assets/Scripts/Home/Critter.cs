@@ -14,7 +14,6 @@ public class Critter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger critter");
         if (triggered)
             return;
         StartCoroutine(RunToEnd());
@@ -30,7 +29,6 @@ public class Critter : MonoBehaviour
 
         while ((target.transform.position - critter.transform.position).sqrMagnitude >= limit)
         {
-            Debug.Log((target.transform.position - critter.transform.position).sqrMagnitude);
             critter.transform.localScale *= scaling;
             critter.transform.Translate(direction * speed * Time.deltaTime, Space.World);
             yield return null;
