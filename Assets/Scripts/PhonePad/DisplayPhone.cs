@@ -38,8 +38,10 @@ public class DisplayPhone : MonoBehaviour {
                         PhoneSound.SetActive(false);
                     }
                 }
-                if(DisplayCanvas != null)
+                Debug.Log("Test1");
+                if (DisplayCanvas != null)
                 {
+                    Debug.Log("Test2");
                     DisplayCanvas.SetActive(true);
                     if(SelectableButton != null)
                     {

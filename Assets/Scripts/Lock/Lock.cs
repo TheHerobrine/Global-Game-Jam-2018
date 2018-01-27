@@ -6,6 +6,7 @@ public class Lock : MonoBehaviour {
 
     public AudioSource lockClick;
     public AudioSource lockOpen;
+    public AudioSource goalSuccess;
     public SpriteRenderer lockCombinaisonRenderer;
     public float[] RotateGoals = new float[4];
     public float gapAcceptance = 10f;
@@ -39,8 +40,9 @@ public class Lock : MonoBehaviour {
         if (iCurrentGoal == 3) {
             lockOpen.Play();
             openLock = true;
+            return;
         }
-        Debug.Log("Deblock");
+        goalSuccess.Play();
         iCurrentGoal++;
     }
     // Update is called once per frame
