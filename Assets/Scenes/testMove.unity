@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 5
   orientation: {x: 0, y: 0, z: 0}
-  animator: {fileID: 1415814628}
+  orientedObject: {fileID: 1415814628}
   moveLimit: 0.001
 --- !u!1 &684984008
 GameObject:
