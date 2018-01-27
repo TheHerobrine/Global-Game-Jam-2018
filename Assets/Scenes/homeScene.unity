@@ -6203,6 +6203,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 1277859050}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 6e67b2a7b48f31c44bb524ea7af928d4, type: 3}
+  soundTime: 23
 --- !u!61 &617899557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8319,7 +8320,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8665,6 +8666,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 345760158}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 2dc3ade89dddef24c851666c28564ee7, type: 3}
+  soundTime: 0
 --- !u!61 &1396615362
 BoxCollider2D:
   m_ObjectHideFlags: 0

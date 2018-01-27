@@ -10,16 +10,29 @@ public class DisplayPhone : MonoBehaviour {
     public GameObject PhoneSound;
     public GameObject SelectableButton;
     public AudioClip FoundSound;
+
+    public float soundTime;
+    private float timer;
    
     private bool clickable;
 
 	// Use this for initialization
 	void Start () {
         clickable = false;
+        timer = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0 )
+            {
+                Move.instance.moveLocked = false;
+            }
+        }
+
 		if(clickable)
         {
             if (Input.GetButtonDown("Fire1") && !Move.instance.moveLocked)
@@ -31,7 +44,9 @@ public class DisplayPhone : MonoBehaviour {
                         AudioSource audio = PhoneSound.GetComponent<AudioSource>();
                         audio.clip = FoundSound;
                         audio.loop = false;
+                        audio.priority = 256;
                         audio.Play();
+                        timer = soundTime;
                     }
                     else
                     {
