@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 0.05
   position: {x: 0, y: 0, z: 0}
-  time: 0.5
+  time: 0.4
   chrono: 0
 --- !u!222 &1591677711
 CanvasRenderer:

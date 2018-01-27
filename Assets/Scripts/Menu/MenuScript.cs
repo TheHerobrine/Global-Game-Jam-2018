@@ -14,6 +14,7 @@ public class MenuScript : MonoBehaviour
 
 	public GameObject menuGroup;
 	public GameObject creditGroup;
+	public GameObject controlsGroup;
 	public GameObject blackScreen;
 
 	public int state = 0;
@@ -88,6 +89,9 @@ public class MenuScript : MonoBehaviour
 						case 0:
 							startGame = true;
 							break;
+						case 1:
+							this.state = 2;
+							break;
 						case 2:
 							this.state = 1;
 							break;
@@ -98,6 +102,7 @@ public class MenuScript : MonoBehaviour
 				}
 				break;
 			case 1:
+			case 2:
 				if (Input.GetButtonDown("Fire1"))
 				{
 					this.state = 0;
@@ -139,7 +144,7 @@ public class MenuScript : MonoBehaviour
 
 	void updateFade(int state)
 	{
-		if (state == 1)
+		if (state != 0)
 		{
 			this.fade += Time.deltaTime / this.fadeTime;
 		}
@@ -150,6 +155,18 @@ public class MenuScript : MonoBehaviour
 		this.fade = Mathf.Clamp(this.fade, -1.0f, 1.0f);
 
 		menuGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, -1.0f, 0.0f));
-		creditGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f));
+		if (state == 0)
+		{
+			creditGroup.GetComponent<CanvasGroup>().alpha = Mathf.Min(Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f)), creditGroup.GetComponent<CanvasGroup>().alpha);
+			controlsGroup.GetComponent<CanvasGroup>().alpha = Mathf.Min(Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f)), controlsGroup.GetComponent<CanvasGroup>().alpha);
+		}
+		if (state == 1)
+		{
+			creditGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f));
+		}
+		if (state == 2)
+		{
+			controlsGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f));
+		}
 	}
 }
