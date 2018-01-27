@@ -34,8 +34,10 @@ public class Move : MonoBehaviour {
         //Vector3 Rotation = new Vector3(0f, 0f, Mathf.Acos(deltaX/deltaY));
         if (speed.normalized.sqrMagnitude >= moveLimit)
         {
-            this.transform.Translate(new Vector3(deltaX, deltaY, 0.0f));
-            animator.speed = Mathf.Lerp(minAnimationSpeed, maxAnimationSpeed, speed.normalized.sqrMagnitude);
+            //this.transform.Translate(new Vector3(deltaX, deltaY, 0.0f));
+			this.GetComponent<Rigidbody2D>().velocity = new Vector3(deltaX, deltaY, 0.0f) / Time.deltaTime;
+
+			animator.speed = Mathf.Lerp(minAnimationSpeed, maxAnimationSpeed, speed.normalized.sqrMagnitude);
             orientation = new Vector3(inputX, inputY, 0f);
             orientation.Normalize();
             //rigidBody.MovePosition(rigidBody.position + (Vector2)speed * Time.deltaTime);
