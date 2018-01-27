@@ -37,10 +37,6 @@ public class soundTrigger : MonoBehaviour {
                 loopTimer = loopTime;
             }
         }
-        if(parentRigidbody.velocity != Vector2.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(parentRigidbody.velocity);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
