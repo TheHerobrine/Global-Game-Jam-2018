@@ -24,6 +24,12 @@ public class TypingText : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetKeyDown("return"))
+		{
+			this.currentChar = this.contentText.Length;
+			this.textElement.text = contentText;
+		}
+
 		this.chrono += Time.deltaTime;
 		if ((this.chrono > this.time) && (this.currentChar < this.contentText.Length))
 		{
