@@ -9,12 +9,13 @@ public class DisplayPhone : MonoBehaviour {
     public GameObject DisplayParticles;
     public GameObject PhoneSound;
     public GameObject SelectableButton;
+    public AudioClip FoundSound;
    
     private bool clickable;
 
 	// Use this for initialization
 	void Start () {
-
+        clickable = false;
 	}
 	
 	// Update is called once per frame
@@ -23,12 +24,30 @@ public class DisplayPhone : MonoBehaviour {
         {
             if (Input.GetButtonDown("Fire1") && !Move.instance.moveLocked)
             {
-                Debug.Log("button pressed");
-                PhoneSound.SetActive(false);
-                DisplayCanvas.SetActive(true);
-                Debug.Log(SelectableButton.GetComponent<Button>());
-                Debug.Log("Select button");
-                SelectableButton.GetComponent<Button>().Select();
+                if(PhoneSound != null)
+                {
+                    if(FoundSound != null)
+                    {
+                        AudioSource audio = PhoneSound.GetComponent<AudioSource>();
+                        audio.clip = FoundSound;
+                        audio.loop = false;
+                        audio.Play();
+                    }
+                    else
+                    {
+                        PhoneSound.SetActive(false);
+                    }
+                }
+                Debug.Log("Test1");
+                if (DisplayCanvas != null)
+                {
+                    Debug.Log("Test2");
+                    DisplayCanvas.SetActive(true);
+                    if(SelectableButton != null)
+                    {
+                        SelectableButton.GetComponent<Button>().Select();
+                    }
+                }
                 Move.instance.moveLocked = true;
                 
             }
@@ -38,12 +57,18 @@ public class DisplayPhone : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         clickable = true;
-        DisplayParticles.SetActive(true);
+        if(DisplayParticles != null)
+        {
+            DisplayParticles.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         clickable = false;
-        DisplayParticles.SetActive(false);
+        if(DisplayParticles != null)
+        {
+            DisplayParticles.SetActive(false);
+        }
     }
 }

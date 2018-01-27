@@ -12,6 +12,9 @@ public class PhoneCall : MonoBehaviour {
     public AudioClip failureSound;
     public AudioClip resultSound;
 
+    public float callTime;
+    private float timer;
+
     private AudioSource audioSource;
     private bool close;
 
@@ -24,12 +27,22 @@ public class PhoneCall : MonoBehaviour {
     void Start ()
     {
         pos = 0;
+        timer = 0;
         close = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                close = true;
+            }
+        }
+
 		if(close)
         {
             gameObject.transform.parent.gameObject.SetActive(false);
@@ -37,6 +50,11 @@ public class PhoneCall : MonoBehaviour {
             close = false;
         }
 	}
+
+    public void closeCanvas()
+    {
+        close = true;
+    }
 
     public void receiveInput(int number)
     {
@@ -46,7 +64,8 @@ public class PhoneCall : MonoBehaviour {
             {
                 audioSource.clip = resultSound;
                 audioSource.Play();
-                close = true;
+                timer = callTime;
+                pos = 0;
             }
             else
             {
