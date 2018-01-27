@@ -12,6 +12,8 @@ public class PhoneCall : MonoBehaviour {
     public AudioClip failureSound;
     public AudioClip resultSound;
 
+    public float callTime;
+
     private AudioSource audioSource;
     private bool close;
 
@@ -38,6 +40,16 @@ public class PhoneCall : MonoBehaviour {
         }
 	}
 
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(callTime);
+    }
+
+    public void closeCanvas()
+    {
+        close = true;
+    }
+
     public void receiveInput(int number)
     {
         if(combination[pos] == number)
@@ -46,6 +58,7 @@ public class PhoneCall : MonoBehaviour {
             {
                 audioSource.clip = resultSound;
                 audioSource.Play();
+                Wait();
                 close = true;
             }
             else
