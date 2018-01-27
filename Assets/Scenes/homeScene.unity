@@ -10468,7 +10468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8fa4913cf16924a907e9161e690640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracked: {fileID: 0}
+  tracked: {fileID: 2119172405}
   speed: 1.6
   trackingRadius: 0.1
   lastPosition: {x: 0, y: 0, z: 0}
@@ -11616,3 +11616,8 @@ Transform:
   m_Father: {fileID: 1718460969}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2119172405 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1525963891114536, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226188532}
