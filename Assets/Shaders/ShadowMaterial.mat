@@ -60,8 +60,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FadeAreaMax: 0.2
-    - _FadeAreaMin: 0.1
+    - _FadeAreaMax: 0.15
+    - _FadeAreaMin: 0.05
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -79,4 +79,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FadeOrigin: {r: 0.638039, g: -1.6642836, b: -0.1, a: 0}
+    - _FadeOrigin: {r: 1.419982, g: 0.31751955, b: -0.1, a: 0}
