@@ -12,7 +12,16 @@ public class MenuScript : MonoBehaviour
 	public GameObject credits;
 	public GameObject quit;
 
+	public GameObject menuGroup;
+	public GameObject creditGroup;
+	public GameObject blackScreen;
+
+	public int state = 0;
+	public float fade = -1.0f;
+	public float fadeTime = 0.5f;
+
 	public int currentSelection = 0;
+	public bool startGame = false;
 
 	// Use this for initialization
 	void Start ()
@@ -23,32 +32,59 @@ public class MenuScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKeyDown("down"))
+		if (startGame)
 		{
-			UnselectText(GetElement(currentSelection));
-			currentSelection++;
-			currentSelection %= 4;
-			SelectText(GetElement(currentSelection));
-		}
-		if (Input.GetKeyDown("up"))
-		{
-			UnselectText(GetElement(currentSelection));
-			currentSelection += 3;
-			currentSelection %= 4;
-			SelectText(GetElement(currentSelection));
+			this.fade += Time.deltaTime / this.fadeTime;
+			blackScreen.GetComponent<CanvasGroup>().alpha = 1.0f + this.fade;
+			if (this.fade > 0.0f)
+			{
+				SceneManager.LoadScene("gameWarning");
+			}
+			return;
 		}
 
-		if (Input.GetKeyDown("return"))
+		updateFade(this.state);
+
+		switch (this.state)
 		{
-			switch (currentSelection)
-			{
-				case 0:
-					SceneManager.LoadScene("gameWarning");
-					break;
-				case 3:
-					Application.Quit();
-					break;
-			}
+			case 0:
+				if (Input.GetKeyDown("down"))
+				{
+					UnselectText(GetElement(currentSelection));
+					currentSelection++;
+					currentSelection %= 4;
+					SelectText(GetElement(currentSelection));
+				}
+				if (Input.GetKeyDown("up"))
+				{
+					UnselectText(GetElement(currentSelection));
+					currentSelection += 3;
+					currentSelection %= 4;
+					SelectText(GetElement(currentSelection));
+				}
+
+				if (Input.GetKeyDown("return"))
+				{
+					switch (currentSelection)
+					{
+						case 0:
+							startGame = true;
+							break;
+						case 2:
+							this.state = 1;
+							break;
+						case 3:
+							Application.Quit();
+							break;
+					}
+				}
+				break;
+			case 1:
+				if (Input.GetKeyDown("return"))
+				{
+					this.state = 0;
+				}
+				break;
 		}
 	}
 
@@ -81,5 +117,21 @@ public class MenuScript : MonoBehaviour
 	{
 		TextMeshProUGUI textElement = element.GetComponent<TextMeshProUGUI>();
 		textElement.text = textElement.text.Substring(2, textElement.text.Length - 4);
+	}
+
+	void updateFade(int state)
+	{
+		if (state == 1)
+		{
+			this.fade += Time.deltaTime / this.fadeTime;
+		}
+		else
+		{
+			this.fade -= Time.deltaTime / this.fadeTime;
+		}
+		this.fade = Mathf.Clamp(this.fade, -1.0f, 1.0f);
+
+		menuGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, -1.0f, 0.0f));
+		creditGroup.GetComponent<CanvasGroup>().alpha = Mathf.Abs(Mathf.Clamp(this.fade, 0.0f, 1.0f));
 	}
 }

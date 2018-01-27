@@ -12,6 +12,13 @@ public class EventWarning : MonoBehaviour {
 	public GameObject Element_05;
 	public GameObject Element_06;
 
+	public GameObject blackScreen;
+	
+	public float fade = -1.0f;
+	public float fadeTime = 0.5f;
+	
+	public bool startGame = false;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -25,6 +32,17 @@ public class EventWarning : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if (startGame)
+		{
+			this.fade += Time.deltaTime / this.fadeTime;
+			blackScreen.GetComponent<CanvasGroup>().alpha = 1.0f + this.fade;
+			if (this.fade > 0.0f)
+			{
+				SceneManager.LoadScene("gameIntro");
+			}
+			return;
+		}
+
 		if (Element_01.GetComponent<TypingText>().finish)
 		{
 			Element_02.SetActive(true);
@@ -44,7 +62,7 @@ public class EventWarning : MonoBehaviour {
 		{
 			if (Element_06.activeSelf)
 			{
-				SceneManager.LoadScene("gameIntro");
+				this.startGame = true;
 			}
 		}
 	}
