@@ -4277,6 +4277,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1224252272}
+  - component: {fileID: 1224252274}
   - component: {fileID: 1224252273}
   m_Layer: 9
   m_Name: Spirit
@@ -4314,10 +4315,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracked: {fileID: 1704048590}
   speed: 0.9
-  trackingRadius: 0.15
+  trackingRadius: 0.06
   oscillateFreq: 1
   oscillateOffset: 150
   oscillateMagnitude: 0.2
+--- !u!50 &1224252274
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224252271}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1.2
+  m_AngularDrag: 0.4
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1251799452
 GameObject:
   m_ObjectHideFlags: 0

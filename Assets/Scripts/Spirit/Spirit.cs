@@ -11,13 +11,25 @@ public class Spirit : MonoBehaviour
     public float oscillateOffset = 150f;
     public float oscillateMagnitude = 0.2f;
 
+    private Rigidbody2D rb;
+
+    public void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     public void Update()
     {
         Vector3 direction = tracked.transform.position - transform.position;
         direction.z = 0f;
         if (direction.sqrMagnitude > trackingRadius)
         {
-            transform.position = Vector3.MoveTowards(transform.position, tracked.transform.position, Time.deltaTime * speed);
+            rb.AddForce(new Vector2(direction.x, direction.y) * direction.sqrMagnitude * speed);
+            // transform.position = Vector3.MoveTowards(transform.position, tracked.transform.position, Time.deltaTime * speed);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(direction.y, -direction.x) * 0.8f * speed);
         }
     }
 }
