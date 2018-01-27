@@ -8,6 +8,7 @@ public class soundTrigger : MonoBehaviour {
     public float loopTime;
 
     private AudioSource soundSource;
+    private Rigidbody2D parentRigidbody;
     private Collider2D triggerCollider;
     private float loopTimer;
     private bool triggered;
@@ -16,6 +17,7 @@ public class soundTrigger : MonoBehaviour {
     {
         soundSource = GetComponent<AudioSource>();
         triggerCollider = GetComponent<Collider2D>();
+
     }
 
     // Use this for initialization
@@ -34,6 +36,10 @@ public class soundTrigger : MonoBehaviour {
                 soundSource.Play();
                 loopTimer = loopTime;
             }
+        }
+        if(parentRigidbody.velocity != Vector2.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(parentRigidbody.velocity);
         }
     }
 
