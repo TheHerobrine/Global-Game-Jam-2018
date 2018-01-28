@@ -15,20 +15,22 @@ Echoes is meant to be play in pair. One of the players will be a young child, wh
 
 # Credits
 
+![The team](https://github.com/TheHerobrine/Global-Game-Jam-2018/blob/master/team_echoes.jpg)
+
 ## Artists
 
-Alvyne Sebalj
-Mélanie L'huillier
-Ninon Godet
+- Alvyne Sebalj
+- Mélanie L'huillier
+- Ninon Godet
 
 ## Developers
 
-Hugo Attal
-Kévin Colombier
-Paul Niezborala
-Victor Rouquette
+- Hugo Attal
+- Kévin Colombier
+- Paul Niezborala
+- Victor Rouquette
 
-# Sound designers
+## Sound designers
 
-Edouard Bourgeat
-Elio Germani
+- Edouard Bourgeat
+- Elio Germani
