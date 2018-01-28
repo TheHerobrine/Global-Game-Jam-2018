@@ -283,7 +283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texte: {fileID: 1080262194}
-  NextScene: {fileID: 102900000, guid: ab115ecfacf6b4e44be2d91ade7f2fca, type: 3}
   blackScreen: {fileID: 940276071}
   fade: -1
   fadeTime: 0.5
