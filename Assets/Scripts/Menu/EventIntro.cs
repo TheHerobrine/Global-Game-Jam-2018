@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class EventIntro : MonoBehaviour {
 
 	public GameObject Texte;
-    public Object NextScene;
 
 	public GameObject blackScreen;
 	
@@ -29,7 +28,7 @@ public class EventIntro : MonoBehaviour {
 			blackScreen.GetComponent<CanvasGroup>().alpha = 1.0f + this.fade;
 			if (this.fade > 0.0f)
 			{
-				SceneManager.LoadScene(NextScene.name);
+				SceneManager.LoadScene("homeScene");
 			}
 			return;
 		}
