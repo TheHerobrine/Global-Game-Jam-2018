@@ -1015,9 +1015,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 943c6c9b360e48a44a1dda3d6086bd03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 90c1cec91a19d784981e7691adc07835, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   DisplayParticles: {fileID: 2047006471}
   PhoneSound: {fileID: 959171962}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 8300000, guid: 4a25c2cc94e957147814239531c8bf33, type: 3}
+  FoundSound: {fileID: 8300000, guid: c751636d57682c242949019084e7f763, type: 3}
   nextScene: 
   soundTime: 14
 --- !u!61 &164836492
@@ -2388,6 +2388,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.51554686
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f88da4507b8e20f4fb4a84add032b534, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -3043,9 +3053,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05446985d500dba4f9cbf5624d9fe280, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56dedc63fb5da214b9d53fdebe06e068, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -3056,7 +3066,7 @@ AudioSource:
   MinDistance: 0.5
   MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3064,20 +3074,44 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 0.05
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -20.007967
+      outSlope: -20.007967
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 0.5
+      inSlope: -5.0019917
+      outSlope: -5.0019917
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.2
+      value: 0.25
+      inSlope: -1.2504979
+      outSlope: -1.2504979
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.4
+      value: 0.125
+      inSlope: -0.31262448
+      outSlope: -0.31262448
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.76585084
+      value: 0.0395813
+      inSlope: -0.07815612
+      outSlope: -0.07815612
       tangentMode: 0
     - serializedVersion: 2
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.022503663
+      inSlope: -0.05001994
+      outSlope: -0.05001994
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3904,9 +3938,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05446985d500dba4f9cbf5624d9fe280, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11afcb245842a6244a77f370bfe46410, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -4094,6 +4128,26 @@ Prefab:
         type: 2}
       propertyPath: RotateGoals.Array.data[3]
       value: -70
+      objectReference: {fileID: 0}
+    - target: {fileID: 82894777135644390, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2515a08927ba4544ae3279a1a25184a, type: 3}
+    - target: {fileID: 82953867580787280, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51a9cbe72d4730244a2aee13d8cbaaab, type: 3}
+    - target: {fileID: 82358568076151530, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ee43c26f2cd9f843ba0efc9dd870bbf, type: 3}
+    - target: {fileID: 82894777135644390, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
@@ -4870,7 +4924,7 @@ MonoBehaviour:
   DisplayParticles: {fileID: 1715410920}
   PhoneSound: {fileID: 1277859050}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 8300000, guid: 6e67b2a7b48f31c44bb524ea7af928d4, type: 3}
+  FoundSound: {fileID: 8300000, guid: b5c779817b0ed364c8ff4aae36582322, type: 3}
   nextScene: 
   soundTime: 23
 --- !u!61 &617899557
@@ -5241,9 +5295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combination: 010000000100000009000000
   pos: 0
-  successSound: {fileID: 8300000, guid: db8797a53e9c6df46944a68dcf75e257, type: 3}
-  failureSound: {fileID: 8300000, guid: b4f60fe2ae885a949a76d6a41b665d80, type: 3}
-  resultSound: {fileID: 8300000, guid: b64d905f46f756147971e415e2a683fe, type: 3}
+  successSound: {fileID: 8300000, guid: b3aa5875b5622924fb0c6729b0fbcafa, type: 3}
+  failureSound: {fileID: 8300000, guid: e7048d2ed81a0914580d2b25913423bd, type: 3}
+  resultSound: {fileID: 8300000, guid: a4f67569a976f2249b36ee0ee55859b7, type: 3}
   callTime: 13
 --- !u!82 &669575886
 AudioSource:
@@ -5525,7 +5579,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 943c6c9b360e48a44a1dda3d6086bd03, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -5801,6 +5855,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.51799405
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c08a98efeacdf45bd2a83ab58f6c59, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -6303,6 +6367,11 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.48288405
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a450248eaa939ea4fb302880aaa3b7dc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -7530,9 +7599,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05446985d500dba4f9cbf5624d9fe280, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11afcb245842a6244a77f370bfe46410, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -7876,6 +7945,11 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.48892602
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ae64438d5b9188499389d18f0970481, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -8107,6 +8181,91 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &1078955583 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865129494763608, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226188532}
+--- !u!82 &1078955586
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078955583}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 332658c81cd673943abfadc6dcd97261, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 40
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1079343783
 GameObject:
   m_ObjectHideFlags: 0
@@ -8495,6 +8654,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.5226913
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 594aebebdc1eebe40a87ed49accee220, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -8549,7 +8718,7 @@ MonoBehaviour:
   DisplayParticles: {fileID: 668139672}
   PhoneSound: {fileID: 467774459}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 8300000, guid: 586789d68c7b68442b0ca5e7e394679b, type: 3}
+  FoundSound: {fileID: 8300000, guid: 5e48fe14d947278419eb71e7228588eb, type: 3}
   nextScene: 
   soundTime: 10
 --- !u!61 &1111679364
@@ -9404,12 +9573,12 @@ Prefab:
         type: 2}
       propertyPath: progress1_clip
       value: 
-      objectReference: {fileID: 8300000, guid: 3a9c549ad27be524195cb93f276f8207, type: 3}
+      objectReference: {fileID: 8300000, guid: fa36e9a8dead73d448c33343efccbcc6, type: 3}
     - target: {fileID: 114651475232002550, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
         type: 2}
       propertyPath: progress2_clip
       value: 
-      objectReference: {fileID: 8300000, guid: e02ad542505591243883895d8b1322e5, type: 3}
+      objectReference: {fileID: 8300000, guid: 1ee310e6ea3911c47b84f2ca031405ba, type: 3}
     - target: {fileID: 114651475232002550, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
         type: 2}
       propertyPath: progress1_object
@@ -9429,7 +9598,7 @@ Prefab:
         type: 2}
       propertyPath: progress3_clip
       value: 
-      objectReference: {fileID: 8300000, guid: e02ad542505591243883895d8b1322e5, type: 3}
+      objectReference: {fileID: 8300000, guid: 0efad6cdb089f7d4b82fa26f6b6fce54, type: 3}
     - target: {fileID: 114651475232002550, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
         type: 2}
       propertyPath: acceleration
@@ -9736,9 +9905,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05446985d500dba4f9cbf5624d9fe280, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56dedc63fb5da214b9d53fdebe06e068, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -10276,7 +10445,7 @@ MonoBehaviour:
   DisplayParticles: {fileID: 359004809}
   PhoneSound: {fileID: 345760158}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 8300000, guid: 2dc3ade89dddef24c851666c28564ee7, type: 3}
+  FoundSound: {fileID: 8300000, guid: 2a52f23bd6a96e548a296949080791ef, type: 3}
   nextScene: 
   soundTime: 16
 --- !u!61 &1396615362
@@ -11590,6 +11759,11 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.4474811
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f88da4507b8e20f4fb4a84add032b534, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
@@ -13227,6 +13401,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.52985823
       objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82474806379211434, guid: 6a4e9a668060f1e48ab26161562abfc7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 403d21b3ecbf52d4589e2920712d2760, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a4e9a668060f1e48ab26161562abfc7, type: 2}
   m_IsPrefabParent: 0
