@@ -2845,7 +2845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &337160408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,6 +4074,26 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804093788623806, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: RotateGoals.Array.data[0]
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804093788623806, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: RotateGoals.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804093788623806, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: RotateGoals.Array.data[2]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804093788623806, guid: f0211e0b94ade584cafa6bdd0aadae8f,
+        type: 2}
+      propertyPath: RotateGoals.Array.data[3]
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0211e0b94ade584cafa6bdd0aadae8f, type: 2}
@@ -5386,7 +5406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &679201121
 Transform:
   m_ObjectHideFlags: 0
@@ -12009,7 +12029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4355144473000608, guid: bdec4f6893bbb0c45923269803c1bbfa, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4355144473000608, guid: bdec4f6893bbb0c45923269803c1bbfa, type: 2}
       propertyPath: m_LocalRotation.x
