@@ -12,47 +12,61 @@ public class ScrollScript : MonoBehaviour
 	public float stopPos;
 	public GameObject subScroll;
 
+	public GameObject audioSource;
+
 	public float chrono;
 	public float chronoFade;
+
+	public float hold;
 
 	// Use this for initialization
 	void Start ()
 	{
 		chrono = 0.0f;
 		chronoFade = 0.0f;
+		this.GetComponent<CanvasGroup>().alpha = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		chrono += Time.deltaTime;
-
-		if (chrono < fadeTime)
+		if (hold < 25.0f)
 		{
-			this.GetComponent<CanvasGroup>().alpha = chrono / fadeTime;
+			hold += Time.deltaTime;
 		}
 		else
 		{
-			this.GetComponent<CanvasGroup>().alpha = 1.0f;
+			chrono += Time.deltaTime;
 
-			float newPos = (chrono - fadeTime) * speed;
-			if (newPos > stopPos)
+			if (chrono < fadeTime)
 			{
-				if (chronoFade > finalFade)
-				{
-					this.GetComponent<CanvasGroup>().alpha = 1.0f - (chronoFade - finalFade) / finalFade;
-					if (chronoFade > finalFade*2.0f)
-					{
-						SceneManager.LoadScene("menu");
-					}
-				}
-				subScroll.transform.position = new Vector3(0.0f, newPos, 0.0f);
-				chronoFade += Time.deltaTime;
+				//this.GetComponent<CanvasGroup>().alpha = Mathf.Min(chrono / fadeTime, 1.0f);
 			}
 			else
 			{
-				this.transform.position = new Vector3(0.0f, newPos, 0.0f);
+				this.GetComponent<CanvasGroup>().alpha = Mathf.Min((chrono - fadeTime) / fadeTime, 1.0f);
+
+				float newPos = (chrono - fadeTime) * speed;
+				if (newPos > stopPos)
+				{
+					if (chronoFade > finalFade)
+					{
+						this.GetComponent<CanvasGroup>().alpha = 1.0f - (chronoFade - finalFade) / finalFade;
+						audioSource.AddComponent<AudioSource>().volume = 1.0f - (chronoFade - finalFade) / finalFade;
+						if (chronoFade > finalFade * 2.0f)
+						{
+							SceneManager.LoadScene("menu");
+						}
+					}
+					subScroll.transform.position = new Vector3(0.0f, newPos, 0.0f);
+					chronoFade += Time.deltaTime;
+				}
+				else
+				{
+					this.transform.position = new Vector3(0.0f, newPos, 0.0f);
+				}
 			}
+			
 		}
 	}
 }
