@@ -2845,7 +2845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &337160408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3908,7 +3908,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5386,7 +5386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &679201121
 Transform:
   m_ObjectHideFlags: 0
@@ -5507,7 +5507,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7042,7 +7042,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1511903140853474, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4790408226223348, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7059,6 +7059,10 @@ Prefab:
     - target: {fileID: 4053824102377188, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_LocalPosition.x
       value: -43.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243373587667388, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
@@ -9436,6 +9440,18 @@ Prefab:
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 4066338719078936, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066338719078936, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066338719078936, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
   m_IsPrefabParent: 0
@@ -9875,7 +9891,7 @@ MonoBehaviour:
   DisplayParticles: {fileID: 116304126}
   PhoneSound: {fileID: 690435189}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 0}
+  FoundSound: {fileID: 8300000, guid: 034a7bcaea384984f8d908ea1c89e8dd, type: 3}
   nextScene: 
   soundTime: 23
 --- !u!61 &1332121240
