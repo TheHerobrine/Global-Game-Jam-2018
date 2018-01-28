@@ -97,6 +97,10 @@ public class DisplayPhone : MonoBehaviour {
 				ParticleSystem.EmissionModule emission = ps.emission;
 				emission.enabled = true;
 			}
+            else
+            {
+                DisplayParticles.SetActive(true);
+            }
         }
     }
 
@@ -110,6 +114,10 @@ public class DisplayPhone : MonoBehaviour {
 				ParticleSystem.EmissionModule emission = ps.emission;
 				emission.enabled = false;
 			}
+            else
+            {
+                DisplayParticles.SetActive(false);
+            }
 		}
     }
 }
