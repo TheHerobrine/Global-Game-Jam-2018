@@ -16,6 +16,7 @@ public class MenuScript : MonoBehaviour
 	public GameObject creditGroup;
 	public GameObject controlsGroup;
 	public GameObject blackScreen;
+	public GameObject audioSource;
 
 	public int state = 0;
 	public float fade = -1.0f;
@@ -40,6 +41,7 @@ public class MenuScript : MonoBehaviour
 		{
 			this.fade += Time.deltaTime / this.fadeTime;
 			blackScreen.GetComponent<CanvasGroup>().alpha = 1.0f + this.fade;
+			audioSource.GetComponent<AudioSource>().volume = 1.0f - (1.0f + this.fade);
 			if (this.fade > 0.0f)
 			{
 				SceneManager.LoadScene("gameWarning");

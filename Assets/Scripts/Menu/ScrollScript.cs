@@ -11,6 +11,7 @@ public class ScrollScript : MonoBehaviour
 	public float speed;
 	public float stopPos;
 	public GameObject subScroll;
+	public GameObject continueText;
 
 	public GameObject audioSource;
 
@@ -44,7 +45,13 @@ public class ScrollScript : MonoBehaviour
 			}
 			else
 			{
+				if (Input.GetButtonDown("Fire1"))
+				{
+					SceneManager.LoadScene("menu");
+				}
+
 				this.GetComponent<CanvasGroup>().alpha = Mathf.Min((chrono - fadeTime) / fadeTime, 1.0f);
+				continueText.GetComponent<CanvasGroup>().alpha = Mathf.Min((chrono - fadeTime) / fadeTime, 1.0f);
 
 				float newPos = (chrono - fadeTime) * speed;
 				if (newPos > stopPos)

@@ -5442,6 +5442,7 @@ MonoBehaviour:
   creditGroup: {fileID: 1044638583}
   controlsGroup: {fileID: 796600585}
   blackScreen: {fileID: 909100557}
+  audioSource: {fileID: 232628615}
   state: 0
   fade: -1
   fadeTime: 0.3
