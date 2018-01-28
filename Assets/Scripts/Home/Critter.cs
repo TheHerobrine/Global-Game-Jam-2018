@@ -36,7 +36,7 @@ public class Critter : MonoBehaviour
         }
         critter.gameObject.SetActive(false);
         yield return null;
-        this.gameObject.SetActive(false);
+        this.enabled = false;
         yield return null;
     }
 }
