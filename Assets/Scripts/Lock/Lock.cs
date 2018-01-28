@@ -70,8 +70,9 @@ public class Lock : MonoBehaviour {
         {
             return;
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Cancel"))
         {
+            Move.instance.moveLocked = false;
             this.gameObject.SetActive(false);
         }
             loopTimer -= Time.deltaTime;
@@ -87,7 +88,6 @@ public class Lock : MonoBehaviour {
 
             float PreviousGoal = iCurrentGoal == 0 || iCurrentGoal == 3 ? 0 : RotateGoals[iCurrentGoal - 1];
             bool SensGaucheVersDroit = RotateGoals[iCurrentGoal] > PreviousGoal;
-            Debug.Log(SensGaucheVersDroit);
             if (RotateGoals[iCurrentGoal]+gapAcceptance > currentRotate && currentRotate > RotateGoals[iCurrentGoal] - gapAcceptance)
             {
                 NextGoal();

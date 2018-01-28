@@ -36,7 +36,7 @@ public class EnterRoom : MonoBehaviour
     {
         if (fadeStarted)
             return;
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             fadeStarted = true;
             DoorSound.Play();
@@ -55,7 +55,7 @@ public class EnterRoom : MonoBehaviour
     {
         Renderer DoorRenderer = Door.GetComponent<Renderer>();
         Color c = DoorRenderer.material.color;
-        for (float f = 1f; f >= 0; f -= 0.01f)
+        for (float f = 1f; f >= 0; f -= 0.06f)
         {
             c.a = f;
             DoorRenderer.material.color = c;

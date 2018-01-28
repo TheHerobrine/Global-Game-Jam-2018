@@ -10955,6 +10955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   envManager: {fileID: 11400000, guid: 6f3bc36235790514eb6faec0c6c422f8, type: 2}
   roof: {fileID: 1878764955}
+  fadeSpeed: 1
 --- !u!4 &1891499308 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4280909303768340, guid: f6cd1446e61af944cb5f532d0befdf2d,
