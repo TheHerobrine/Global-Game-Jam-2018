@@ -84,7 +84,7 @@ public class DisplayPhone : MonoBehaviour {
                     }
                 }
 
-                if(nextScene != null)
+                if(nextScene != null && nextScene != "")
                 {
                     UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
                 }
