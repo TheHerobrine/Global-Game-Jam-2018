@@ -10,7 +10,7 @@ public class Lock : MonoBehaviour {
     public AudioSource Failed;
     public SpriteRenderer lockCombinaisonRenderer;
     public SpriteRenderer leverCombinaisonRenderer;
-    public SpriteRenderer ImageAfter;
+    public GameObject ImageAfter;
 
     public float[] RotateGoals = new float[4];
     public float gapAcceptance = 10f;

@@ -46,7 +46,6 @@ public class DisplayPhone : MonoBehaviour {
                             discovered = true;
                             Move.instance.Progress++;
                             Move.instance.checkProgress();
-                            Debug.Log(Move.instance.Progress);
                         }
                         PhoneSound.GetComponent<soundTrigger>().discovered = true;
                         AudioSource audio = PhoneSound.GetComponent<AudioSource>();
@@ -62,6 +61,7 @@ public class DisplayPhone : MonoBehaviour {
                         PhoneSound.SetActive(false);
                     }
                 }
+
                 if (DisplayCanvas != null)
                 {
                     DisplayCanvas.SetActive(true);
@@ -70,17 +70,7 @@ public class DisplayPhone : MonoBehaviour {
                         SelectableButton.GetComponent<Button>().Select();
                     }
                 }
-                Move.instance.moveLocked = true;
-                
-            }
-
-            if (Input.GetButtonDown("Cancel"))
-            {
-                Move.instance.moveLocked = false;
-                if (DisplayCanvas != null)
-                {
-                    DisplayCanvas.SetActive(false);
-                }
+                Move.instance.moveLocked = true;    
             }
         }
 	}

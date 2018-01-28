@@ -81,7 +81,14 @@ public class Move : MonoBehaviour {
 			this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 		}
 
-        animator.SetBool("Moving", moveLocked || speed.normalized.sqrMagnitude >= moveLimit);
+        if(moveLocked)
+        {
+            animator.SetBool("Moving", false);
+        }
+        else
+        {
+            animator.SetBool("Moving", moveLocked || speed.normalized.sqrMagnitude >= moveLimit);
+        }
         
         Debug.DrawLine(this.transform.position, this.transform.position + orientation);
 	}

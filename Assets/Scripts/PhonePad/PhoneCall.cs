@@ -69,7 +69,6 @@ public class PhoneCall : MonoBehaviour {
                     discovered = true;
                     Move.instance.Progress++;
                     Move.instance.checkProgress();
-                    Debug.Log(Move.instance.Progress);
                 }
                 audioSource.clip = resultSound;
                 audioSource.Play();
