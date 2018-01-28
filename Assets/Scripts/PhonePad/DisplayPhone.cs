@@ -17,10 +17,22 @@ public class DisplayPhone : MonoBehaviour {
     private bool discovered;
     private bool clickable;
 
+	private ParticleSystem ps;
+
 	// Use this for initialization
 	void Start () {
         clickable = false;
         timer = 0;
+
+		if (DisplayParticles != null)
+		{
+			ps = DisplayParticles.GetComponent<ParticleSystem>();
+			if (ps != null)
+			{
+				ParticleSystem.EmissionModule emission = ps.emission;
+				emission.enabled = false;
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -80,7 +92,11 @@ public class DisplayPhone : MonoBehaviour {
         clickable = true;
         if(DisplayParticles != null)
         {
-            DisplayParticles.SetActive(true);
+			if (ps != null)
+			{
+				ParticleSystem.EmissionModule emission = ps.emission;
+				emission.enabled = true;
+			}
         }
     }
 
@@ -88,8 +104,12 @@ public class DisplayPhone : MonoBehaviour {
     {
         clickable = false;
         if(DisplayParticles != null)
-        {
-            DisplayParticles.SetActive(false);
-        }
+		{
+			if (ps != null)
+			{
+				ParticleSystem.EmissionModule emission = ps.emission;
+				emission.enabled = false;
+			}
+		}
     }
 }
