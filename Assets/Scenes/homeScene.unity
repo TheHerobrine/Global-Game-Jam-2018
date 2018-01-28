@@ -6300,18 +6300,6 @@ Prefab:
       propertyPath: m_Name
       value: Crow (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4269389377164044, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -81.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4269389377164044, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.20000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4269389377164044, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.20000006
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
   m_IsPrefabParent: 0
@@ -12300,10 +12288,6 @@ Prefab:
     - target: {fileID: 4269389377164044, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4269389377164044, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 128.091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5728a6f5dc1e7a840ac02061f2cc6dc1, type: 2}
