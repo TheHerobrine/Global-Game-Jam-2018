@@ -532,13 +532,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'But I must explain to you how all this mistaken idea of denouncing pleasure
-    and praising pain
-
-    was born and I will give you a complete account of the system, and expound the
-    actual
-
-    teachings of the great explorer of the truth, the master-builder of human happiness.'
+  m_text: "Once upon a midnight dreary, while I pondered, weak and weary,\nOver many
+    a quaint and curious volume of forgotten lore--\nWhile I nodded, nearly napping,
+    suddenly there came a tapping,\nAs of some one gently rapping, rapping at my chamber
+    door\n\n\t\t\t\t\t- By Edgar Allan Poe\t\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c05406a32371ada4db56283582b3e453, type: 2}
   m_sharedMaterial: {fileID: 21116120165318752, guid: c05406a32371ada4db56283582b3e453,
@@ -584,7 +581,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 180
+  m_firstOverflowCharacterIndex: 121
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 1
@@ -606,12 +603,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -2.4440455, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1080262196}
-    characterCount: 264
+    characterCount: 271
     spriteCount: 0
-    spaceCount: 46
+    spaceCount: 54
     wordCount: 47
     linkCount: 0
-    lineCount: 3
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
