@@ -34,3 +34,6 @@ Echoes is meant to be play in pair. One of the players will be a young child, wh
 
 - Edouard Bourgeat
 - Elio Germani
+
+## Music by
+- Elio Germani
