@@ -10200,7 +10200,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 690435189}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 034a7bcaea384984f8d908ea1c89e8dd, type: 3}
-  nextScene: 
+  nextScene: ending
   soundTime: 23
 --- !u!61 &1332121240
 BoxCollider2D:
