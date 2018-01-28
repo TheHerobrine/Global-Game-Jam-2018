@@ -4888,7 +4888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &679201121
 Transform:
   m_ObjectHideFlags: 0
@@ -8525,6 +8525,21 @@ Prefab:
       propertyPath: maxAnimationSpeed
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 20789146160504996, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20789146160504996, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20789146160504996, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61b52a0c5d44ac5418b17338a5a7bb22, type: 2}
   m_IsPrefabParent: 0
@@ -9033,7 +9048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1511903140853474, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1340476532540402, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_IsActive
