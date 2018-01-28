@@ -46,6 +46,7 @@ public class SceneIntro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
+		this.GetComponent<CanvasGroup>().alpha = Mathf.Min(1.0f, timer);
         if (timer > time11 && !activate1)
         {
             activate1 = true;

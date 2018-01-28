@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 661754349}
   - component: {fileID: 661754352}
   - component: {fileID: 661754353}
+  - component: {fileID: 661754354}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -728,6 +729,17 @@ MonoBehaviour:
   time22: 18
   girl23: {fileID: 1622994219}
   time23: 21
+--- !u!225 &661754354
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661754348}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1080262194
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000047684, y: -199.64001}
+  m_AnchoredPosition: {x: 7.285, y: -159.17}
   m_SizeDelta: {x: 785.43, y: 118.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080262196
@@ -786,7 +798,7 @@ MonoBehaviour:
   m_text: "Once upon a midnight dreary, while I pondered, weak and weary,\nOver many
     a quaint and curious volume of forgotten lore--\nWhile I nodded, nearly napping,
     suddenly there came a tapping,\nAs of some one gently rapping, rapping at my chamber
-    door\n\t\t\t\t\t- By Edgar Allan Poe\t\r\n"
+    door\n\t\t\t\t\t- Edgar Allan Poe\t\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c05406a32371ada4db56283582b3e453, type: 2}
   m_sharedMaterial: {fileID: 21116120165318752, guid: c05406a32371ada4db56283582b3e453,
@@ -820,7 +832,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 257
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
@@ -854,10 +866,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: -2.4440455, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1080262196}
-    characterCount: 270
+    characterCount: 267
     spriteCount: 0
-    spaceCount: 53
-    wordCount: 47
+    spaceCount: 52
+    wordCount: 46
     linkCount: 0
     lineCount: 5
     pageCount: 1
