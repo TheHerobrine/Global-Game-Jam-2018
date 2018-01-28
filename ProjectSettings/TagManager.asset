@@ -46,3 +46,6 @@ TagManager:
   - name: BlackScreen
     uniqueID: 1390679607
     locked: 0
+  - name: Canvas
+    uniqueID: 3361327835
+    locked: 0

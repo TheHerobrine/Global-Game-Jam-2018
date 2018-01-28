@@ -10,6 +10,7 @@ public class DisplayPhone : MonoBehaviour {
     public GameObject PhoneSound;
     public GameObject SelectableButton;
     public AudioClip FoundSound;
+    public string nextScene;
 
     public float soundTime;
     private float timer;
@@ -82,6 +83,12 @@ public class DisplayPhone : MonoBehaviour {
                         SelectableButton.GetComponent<Button>().Select();
                     }
                 }
+
+                if(nextScene != null)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
+                }
+
                 Move.instance.moveLocked = true;    
             }
         }
@@ -97,6 +104,10 @@ public class DisplayPhone : MonoBehaviour {
 				ParticleSystem.EmissionModule emission = ps.emission;
 				emission.enabled = true;
 			}
+            else
+            {
+                DisplayParticles.SetActive(true);
+            }
         }
     }
 
@@ -110,6 +121,10 @@ public class DisplayPhone : MonoBehaviour {
 				ParticleSystem.EmissionModule emission = ps.emission;
 				emission.enabled = false;
 			}
+            else
+            {
+                DisplayParticles.SetActive(false);
+            }
 		}
     }
 }
