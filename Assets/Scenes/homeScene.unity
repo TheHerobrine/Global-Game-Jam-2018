@@ -7062,7 +7062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1511903140853474, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4790408226223348, guid: 97c88829de223874da3ade7fe07349fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -12472,9 +12472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracked: {fileID: 2119172405}
   speed: 1.6
-  radius: 0.35
-  freq: 1.5
-  lastPosition: {x: 0, y: 0, z: 0}
+  trackingRadius: 0.06
 --- !u!4 &1821221877
 Transform:
   m_ObjectHideFlags: 0
