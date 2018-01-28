@@ -17,6 +17,7 @@ public class Lock : MonoBehaviour {
     public float gapFailed= 10f;
     public bool openLock = false;
 
+    private bool discovered;
     private float currentRotate = 0;
     private float PreviousTurn = 0f;
     private bool returnToZero = false;
@@ -24,7 +25,7 @@ public class Lock : MonoBehaviour {
     private float loopTimer;
     // Use this for initialization
     void Start () {
-		
+        discovered = false;
 	}
     
     IEnumerator ReturnToZero()
@@ -47,6 +48,13 @@ public class Lock : MonoBehaviour {
         {
             leverCombinaisonRenderer.transform.Rotate(0f, 0f, -1f);
             yield return null;
+        }
+        if(!discovered)
+        {
+            discovered = true;
+            Move.instance.Progress++;
+            Move.instance.checkProgress();
+            Debug.Log(Move.instance.Progress);
         }
         ImageAfter.gameObject.SetActive(true);
         this.gameObject.SetActive(false);

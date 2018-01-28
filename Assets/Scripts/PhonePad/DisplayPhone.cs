@@ -13,7 +13,8 @@ public class DisplayPhone : MonoBehaviour {
 
     public float soundTime;
     private float timer;
-   
+
+    private bool discovered;
     private bool clickable;
 
 	// Use this for initialization
@@ -40,6 +41,13 @@ public class DisplayPhone : MonoBehaviour {
                 {
                     if(FoundSound != null)
                     {
+                        if(!discovered)
+                        {
+                            discovered = true;
+                            Move.instance.Progress++;
+                            Move.instance.checkProgress();
+                            Debug.Log(Move.instance.Progress);
+                        }
                         PhoneSound.GetComponent<soundTrigger>().discovered = true;
                         AudioSource audio = PhoneSound.GetComponent<AudioSource>();
                         audio.clip = FoundSound;

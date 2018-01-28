@@ -11,11 +11,24 @@ public class Move : MonoBehaviour {
 
     public GameObject orientedObject;
     private Animator animator;
+    private AudioSource audio;
 
     public float moveLimit = 0.1f;
     public bool moveLocked;
     public float minAnimationSpeed = 0.2f;
     public float maxAnimationSpeed = 1.5f;
+
+    public int Progress;
+    private bool Progress1;
+    private bool Progress2;
+    private bool Progress3;
+
+    public AudioClip progress1_clip;
+    public GameObject progress1_object;
+    public AudioClip progress2_clip;
+    public GameObject progress2_object;
+    public AudioClip progress3_clip;
+    public GameObject progress3_object;
 
     private void Awake()
     {
@@ -28,6 +41,10 @@ public class Move : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        Progress1 = false;
+        Progress2 = false;
+
+        audio = GetComponent<AudioSource>();
         animator = orientedObject.GetComponent<Animator>();
     }
     // Use this for initialization
@@ -37,7 +54,7 @@ public class Move : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        
+
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
@@ -68,4 +85,32 @@ public class Move : MonoBehaviour {
         
         Debug.DrawLine(this.transform.position, this.transform.position + orientation);
 	}
+
+    public void checkProgress()
+    {
+        if (Progress > 3 &&
+            !Progress1)
+        {
+            Progress1 = true;
+            audio.clip = progress1_clip;
+            audio.Play();
+            progress1_object.SetActive(true);
+        }
+        if (Progress > 4 &&
+            !Progress2)
+        {
+            Progress2 = true;
+            audio.clip = progress2_clip;
+            audio.Play();
+            progress2_object.SetActive(false);
+        }
+        if(Progress > 5 &&
+            !Progress3)
+        {
+            Progress3 = true;
+            audio.clip = progress3_clip;
+            audio.Play();
+            progress3_object.SetActive(false);
+        }
+    }
 }

@@ -17,9 +17,11 @@ public class PhoneCall : MonoBehaviour {
 
     private AudioSource audioSource;
     private bool close;
+    private bool discovered;
 
     private void Awake()
     {
+        discovered = false;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -62,6 +64,13 @@ public class PhoneCall : MonoBehaviour {
         {
             if(pos == combination.Length - 1 )
             {
+                if(!discovered)
+                {
+                    discovered = true;
+                    Move.instance.Progress++;
+                    Move.instance.checkProgress();
+                    Debug.Log(Move.instance.Progress);
+                }
                 audioSource.clip = resultSound;
                 audioSource.Play();
                 timer = callTime;
