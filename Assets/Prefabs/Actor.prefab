@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc20eaa2886d75440b276e435ad3e615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepSounds:
+  footstepSoundsInside:
   - {fileID: 8300000, guid: e0564492ac1b94c4f9e75473503b67c6, type: 3}
   - {fileID: 8300000, guid: cf18cc0d32ae5e447bcd56bfc8132260, type: 3}
   - {fileID: 8300000, guid: 75ba8e1ff923fb2418ba40c128dae58c, type: 3}
@@ -436,7 +436,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 83a3270fa004b2347a3fe3b87a9a0b4a, type: 3}
   - {fileID: 8300000, guid: 471017743e184ac4491544d285609043, type: 3}
   - {fileID: 8300000, guid: 6f6018c78acf6b94ca580cb3c5e6d499, type: 3}
+  - {fileID: 8300000, guid: 495b687d39468754aac5d7138cb5ec4b, type: 3}
+  - {fileID: 8300000, guid: f3d6ed7fb0c3b2d4d8c0b84698dfde1f, type: 3}
+  footstepSoundsOutside:
+  - {fileID: 8300000, guid: 7860a9d321ce79a4f8ad14a443112fad, type: 3}
+  - {fileID: 8300000, guid: a88a5506c65e0724dbd620b1ac2b86ef, type: 3}
+  - {fileID: 8300000, guid: bec8b055e90dcdf48b549d839e98cf4c, type: 3}
+  - {fileID: 8300000, guid: a3f559e91906fa248be424a12529713b, type: 3}
+  - {fileID: 8300000, guid: 5f80d5ccc561a8b45b2b1904bb32259f, type: 3}
+  - {fileID: 8300000, guid: e13a46d0b94c63c459eeb951c0ff791e, type: 3}
+  - {fileID: 8300000, guid: 27bf6f40e1096074f9a79c6d50dfa720, type: 3}
+  - {fileID: 8300000, guid: 245713a79af0fd448a08ef9d127fd61c, type: 3}
+  - {fileID: 8300000, guid: 125e428dbf72197469d7a04dbeabb548, type: 3}
+  - {fileID: 8300000, guid: 91ba3af4357ba85439ddaf2769daa48c, type: 3}
   source: {fileID: 82986831735311610}
+  envManager: {fileID: 11400000, guid: 6f3bc36235790514eb6faec0c6c422f8, type: 2}
 --- !u!212 &212067879868023802
 SpriteRenderer:
   m_ObjectHideFlags: 1
