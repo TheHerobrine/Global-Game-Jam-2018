@@ -12472,9 +12472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracked: {fileID: 2119172405}
   speed: 1.6
-  radius: 0.35
-  freq: 1.5
-  lastPosition: {x: 0, y: 0, z: 0}
+  trackingRadius: 0.06
 --- !u!4 &1821221877
 Transform:
   m_ObjectHideFlags: 0
