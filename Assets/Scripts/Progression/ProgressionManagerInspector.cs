@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEngine;
 using UnityEditor;
 
@@ -56,3 +55,4 @@ public class ProgressionManagerInspector : Editor
             EditorUtility.SetDirty(target);
     }
 }
+#endif
