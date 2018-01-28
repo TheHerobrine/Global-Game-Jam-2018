@@ -32,8 +32,7 @@ public class DisplayPhone : MonoBehaviour {
                 Move.instance.moveLocked = false;
             }
         }
-
-		if(clickable)
+        if (clickable)
         {
             if (Input.GetButtonDown("Fire1") && !Move.instance.moveLocked)
             {
@@ -55,10 +54,8 @@ public class DisplayPhone : MonoBehaviour {
                         PhoneSound.SetActive(false);
                     }
                 }
-                Debug.Log("Test1");
                 if (DisplayCanvas != null)
                 {
-                    Debug.Log("Test2");
                     DisplayCanvas.SetActive(true);
                     if(SelectableButton != null)
                     {
@@ -67,6 +64,15 @@ public class DisplayPhone : MonoBehaviour {
                 }
                 Move.instance.moveLocked = true;
                 
+            }
+
+            if (Input.GetButtonDown("Cancel"))
+            {
+                Move.instance.moveLocked = false;
+                if (DisplayCanvas != null)
+                {
+                    DisplayCanvas.SetActive(false);
+                }
             }
         }
 	}

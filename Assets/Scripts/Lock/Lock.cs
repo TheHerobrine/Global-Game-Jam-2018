@@ -70,11 +70,6 @@ public class Lock : MonoBehaviour {
         {
             return;
         }
-        if (Input.GetButtonDown("Cancel"))
-        {
-            Move.instance.moveLocked = false;
-            this.gameObject.SetActive(false);
-        }
             loopTimer -= Time.deltaTime;
         //Debug.Log(loopTimer);
         if (loopTimer < 0)
