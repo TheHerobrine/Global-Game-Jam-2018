@@ -1400,6 +1400,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 959171962}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 4a25c2cc94e957147814239531c8bf33, type: 3}
+  nextScene: 
   soundTime: 14
 --- !u!61 &164836492
 BoxCollider2D:
@@ -4784,6 +4785,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 1277859050}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 6e67b2a7b48f31c44bb524ea7af928d4, type: 3}
+  nextScene: 
   soundTime: 23
 --- !u!61 &617899557
 BoxCollider2D:
@@ -8376,6 +8378,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 467774459}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 586789d68c7b68442b0ca5e7e394679b, type: 3}
+  nextScene: 
   soundTime: 10
 --- !u!61 &1111679364
 BoxCollider2D:
@@ -9249,7 +9252,7 @@ Prefab:
         type: 2}
       propertyPath: progress3_object
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1928396944}
     - target: {fileID: 114651475232002550, guid: 61b52a0c5d44ac5418b17338a5a7bb22,
         type: 2}
       propertyPath: progress3_clip
@@ -9724,7 +9727,8 @@ MonoBehaviour:
   DisplayParticles: {fileID: 116304126}
   PhoneSound: {fileID: 690435189}
   SelectableButton: {fileID: 0}
-  FoundSound: {fileID: 8300000, guid: 6e67b2a7b48f31c44bb524ea7af928d4, type: 3}
+  FoundSound: {fileID: 0}
+  nextScene: 
   soundTime: 23
 --- !u!61 &1332121240
 BoxCollider2D:
@@ -10147,6 +10151,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 345760158}
   SelectableButton: {fileID: 0}
   FoundSound: {fileID: 8300000, guid: 2dc3ade89dddef24c851666c28564ee7, type: 3}
+  nextScene: 
   soundTime: 16
 --- !u!61 &1396615362
 BoxCollider2D:
@@ -11922,7 +11927,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1995352037429438, guid: bdec4f6893bbb0c45923269803c1bbfa, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdec4f6893bbb0c45923269803c1bbfa, type: 2}
@@ -13766,6 +13771,7 @@ MonoBehaviour:
   PhoneSound: {fileID: 113538469}
   SelectableButton: {fileID: 178393015}
   FoundSound: {fileID: 0}
+  nextScene: 
   soundTime: 13
 --- !u!61 &2016577123
 BoxCollider2D:

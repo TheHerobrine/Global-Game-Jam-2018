@@ -10,6 +10,7 @@ public class DisplayPhone : MonoBehaviour {
     public GameObject PhoneSound;
     public GameObject SelectableButton;
     public AudioClip FoundSound;
+    public string nextScene;
 
     public float soundTime;
     private float timer;
@@ -82,6 +83,12 @@ public class DisplayPhone : MonoBehaviour {
                         SelectableButton.GetComponent<Button>().Select();
                     }
                 }
+
+                if(nextScene != null)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
+                }
+
                 Move.instance.moveLocked = true;    
             }
         }
