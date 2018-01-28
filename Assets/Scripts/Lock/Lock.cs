@@ -54,7 +54,6 @@ public class Lock : MonoBehaviour {
             discovered = true;
             Move.instance.Progress++;
             Move.instance.checkProgress();
-            Debug.Log(Move.instance.Progress);
         }
         ImageAfter.gameObject.SetActive(true);
         this.gameObject.SetActive(false);
@@ -89,7 +88,7 @@ public class Lock : MonoBehaviour {
         if(!returnToZero && horizontal != 0.0f)
         {
 
-            float PreviousGoal = iCurrentGoal == 0 || iCurrentGoal == 3 ? 0 : RotateGoals[iCurrentGoal - 1];
+            float PreviousGoal = iCurrentGoal == 0 || iCurrentGoal == 4 ? 0 : RotateGoals[iCurrentGoal - 1];
             bool SensGaucheVersDroit = RotateGoals[iCurrentGoal] > PreviousGoal;
             if (RotateGoals[iCurrentGoal]+gapAcceptance > currentRotate && currentRotate > RotateGoals[iCurrentGoal] - gapAcceptance)
             {
