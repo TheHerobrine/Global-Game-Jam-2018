@@ -26,6 +26,7 @@ public class Critter : MonoBehaviour
         float angle = Vector3.Angle(Vector3.up, direction.normalized);
 
         critter.transform.Rotate(Vector3.forward, angle);
+        critter.GetComponent<Animator>().SetBool("scared", true);
 
         while ((target.transform.position - critter.transform.position).sqrMagnitude >= limit)
         {
@@ -35,7 +36,7 @@ public class Critter : MonoBehaviour
         }
         critter.gameObject.SetActive(false);
         yield return null;
-        this.gameObject.SetActive(false);
+        this.enabled = false;
         yield return null;
     }
 }
