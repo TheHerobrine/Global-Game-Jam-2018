@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4433342782213966}
   - component: {fileID: 212258668617082894}
+  - component: {fileID: 114148988473322928}
   m_Layer: 0
   m_Name: "lumi\xE8ret\xE9l\xE9"
   m_TagString: Untagged
@@ -820,6 +821,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 79.89337, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114148988473322928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265832103003510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dcb7d431870ea4d873f89849d6b89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkProb: 0.4
+  minTime: 0.2
+  chrono: 0
+  lightRenderer: {fileID: 212258668617082894}
 --- !u!114 &114807297486667718
 MonoBehaviour:
   m_ObjectHideFlags: 1
